@@ -15,14 +15,14 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-class DrawingPanel extends JPanel {
+class DrawingPanel extends JPanel { // for the GUI panel?
 
     private ImageIcon icon; // initialize the image icon var
 
     public DrawingPanel() { // the window in which the image will be displayed
 
         loadImage();
-        initPanel();
+        initPanel(); // load image into icon obj and initialize the panel(/window?)
     }
 
     private void loadImage() { // loading the image into the icon var
@@ -34,12 +34,12 @@ class DrawingPanel extends JPanel {
 
         int w = icon.getIconWidth();
         int h = icon.getIconHeight();
-        setPreferredSize(new Dimension(w, h));
+        setPreferredSize(new Dimension(w, h)); // set the window's prefered sized to the dimensions of the input image
     }    
 
     @Override
     public void paintComponent(Graphics g) {
-        super.paintComponent(g);
+        super.paintComponent(g); 
 
         icon.paintIcon(this, g, 0, 0);
     }
