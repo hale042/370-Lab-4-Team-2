@@ -102,7 +102,7 @@ class gui {
         // row = suit, value = column
         // https://www.youtube.com/watch?v=ntirmRhy6Fw
         try {
-            ImageIcon image = new ImageIcon("images\\ace_of_spades2.png"); // create imageicon object
+            ImageIcon image = new ImageIcon("Lab4\\Poker cards\\ace_of_spades2.png"); // create imageicon object
             int imageW = image.getIconWidth();
             int imageH = image.getIconHeight();
             
