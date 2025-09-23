@@ -108,6 +108,7 @@ class gui {
         // frame.setSize(300, 300);
         // frame.setSize(frameDimension);
         frame.setMinimumSize(frameDimension);
+        // frame.getSize().height
 
         // JLabel label = new JLabel("Hello World");
         // frame.getContentPane().add(label);
@@ -122,7 +123,7 @@ class gui {
             
             // scaling test (https://stackoverflow.com/questions/6714045/how-to-resize-jlabel-imageicon)
             Image testImage = image.getImage(); // transform it 
-            Image newimg = testImage.getScaledInstance(imageW/2, imageH/2,  Image.SCALE_SMOOTH); // scale it the smooth way  
+            Image newimg = testImage.getScaledInstance(imageW/2, imageH/2, Image.SCALE_SMOOTH); // scale it the smooth way  
             ImageIcon scaledImage = new ImageIcon(newimg);  // transform it back
             
             // // ImageIcon test = image.getImage();
@@ -150,19 +151,18 @@ class gui {
         File[] imagePaths = directory.listFiles();
         
         System.out.println(imagePaths.length);
-        /*
+        
         // might be the hard way...
         ArrayList<ImageIcon> images = new ArrayList<ImageIcon>();
 
         // print list of file paths
         if (imagePaths != null) {
             for (File file : imagePaths) {
-                // System.out.println(file.getName());
+                System.out.println(file.getName());
                 // should probably check file extensions :shrug:
-                
             }
         }
-        */
+        
     }
 
     public static void listShuffleTest() {
@@ -201,8 +201,8 @@ class gui {
             public void run() {
                 // BasicTest();
                 // ChatExample();
-                ImageDisplay();
-                // DisplayImagesFromDirectory(null);
+                // ImageDisplay();
+                DisplayImagesFromDirectory(null);
                 // listShuffleTest();
             }
         });
